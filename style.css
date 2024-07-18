@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+:root {
+  --main-bg-color: #f3f5fc;
+  --main-text-color: #0a3871;
+  --secondary-bg-color: #d8dfe8;
+  --secondary-text-color: #495057;
+  --sombra: rgba(0, 0, 0, 0.08);
+  --texto: "Inter";
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Añadido para corregir el modelo de caja */
+}
+
+.contenedor {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  background: var(--main-bg-color);
+  overflow: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.texto {
+  font-family: var(--texto);  
+  background-color: var(--main-bg-color);
+  border-radius: 20px;
+  width: 42%;
+  height: 60%;
+  left: 12%;
+  top: 15%;
+  border: none;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 150%;
+  position: absolute;
+}
+
+.condiciones, .botones {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: absolute;
+  width: 80%;
+  left: 12%;
+  overflow-x: auto;
+}
+
+.condiciones {
+  top: 80%;
+  gap: 8px;
+}
+
+.condiciones p {
+  font-family: var(--texto);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 150%;
+  color: #495057;
+}
+
+.botones {
+  top: 82%;
+  gap: 24px;
+  align-items: flex-start;
+  padding: 1% 0;
+  overflow-x: auto;
+}
+
+.contenedor_boton_encriptar, .contenedor_boton_desencriptar {
+  align-items: center;
+  justify-content: center;
+  width: 20%;
+  font-family: var(--texto);
+  font-size: 18px;
+  line-height: 19px;
+  text-align: center;
+  padding: 1%;
+}
+
+.contenedor_boton_encriptar {
+  border-radius: 24px;
+  background-color: var(--main-text-color);
+  color: #FFFFFF;
+}
+
+.contenedor_boton_desencriptar {
+  border-radius: 24px;
+  background-color: #D8DFE8;
+  color: #0A3871;
+}
+
+.contenedor_resultado {
+  display: flex;
+  flex-direction: column; /* Cambiado a columna para mejor alineación */
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 30%;
+  height: 90%;
+  left: 60%;
+  top: 5%;
+  background: #fff;
+  border-radius: 32px;
+  box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+}
+
+.mensaje-encriptado {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 16px;
+  text-align: center;
+  padding: 20px;
+}
+
+.mensaje-encriptado h2, .mensaje-encriptado p {
+  font-family: var(--texto);
+}
+
+.mensaje-encriptado h2 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 120%;
+  color: #343A40;
+}
+
+.mensaje-encriptado p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--secondary-text-color);
+}
+
+@media (max-width: 57.5em) {
+  .contenedor {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .texto {
+    width: 80%;
+    height: 60%;
+    left: 10%;
+    top: 5%;
+  }
+
+  .condiciones {
+    width: 80%;
+    left: 10%;
+    top: 67%;
+  }
+
+  .condiciones p {
+    font-size: 16px;
+  }
+
+  .botones {
+    width: 80%;
+    left: 10%;
+    top: 70%;
+  }
+
+  .contenedor_boton_encriptar, .contenedor_boton_desencriptar {
+    width: 48%;
+    border-radius: 16px;
+  }
+
+  .contenedor_resultado {
+    width: 80%;
+    height: 15%;
+    left: 10%;
+    top: 80%;
+  }
+
+  .mensaje-encriptado {
+    width: 100%;
+    top: 5%;
+  }
+}
